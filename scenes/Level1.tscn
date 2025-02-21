@@ -86,6 +86,54 @@ position = Vector2(70, 0)
 [node name="StonePlatform3" parent="PlatformBlue4" instance=ExtResource("2_ba40b")]
 position = Vector2(142, 0)
 
+[node name="PlatformBlue7" type="Node2D" parent="."]
+position = Vector2(333, -38)
+script = ExtResource("1_h445l")
+
+[node name="StonePlatform" parent="PlatformBlue7" instance=ExtResource("2_ba40b")]
+
+[node name="StonePlatform2" parent="PlatformBlue7" instance=ExtResource("2_ba40b")]
+position = Vector2(70, 0)
+
+[node name="StonePlatform3" parent="PlatformBlue7" instance=ExtResource("2_ba40b")]
+position = Vector2(142, 0)
+
+[node name="PlatformBlue8" type="Node2D" parent="."]
+position = Vector2(548, -38)
+script = ExtResource("1_h445l")
+
+[node name="StonePlatform" parent="PlatformBlue8" instance=ExtResource("2_ba40b")]
+
+[node name="StonePlatform2" parent="PlatformBlue8" instance=ExtResource("2_ba40b")]
+position = Vector2(70, 0)
+
+[node name="StonePlatform3" parent="PlatformBlue8" instance=ExtResource("2_ba40b")]
+position = Vector2(142, 0)
+
+[node name="PlatformBlue9" type="Node2D" parent="."]
+position = Vector2(-91, -38)
+script = ExtResource("1_h445l")
+
+[node name="StonePlatform" parent="PlatformBlue9" instance=ExtResource("2_ba40b")]
+
+[node name="StonePlatform2" parent="PlatformBlue9" instance=ExtResource("2_ba40b")]
+position = Vector2(70, 0)
+
+[node name="StonePlatform3" parent="PlatformBlue9" instance=ExtResource("2_ba40b")]
+position = Vector2(142, 0)
+
+[node name="PlatformBlue10" type="Node2D" parent="."]
+position = Vector2(124, -38)
+script = ExtResource("1_h445l")
+
+[node name="StonePlatform" parent="PlatformBlue10" instance=ExtResource("2_ba40b")]
+
+[node name="StonePlatform2" parent="PlatformBlue10" instance=ExtResource("2_ba40b")]
+position = Vector2(70, 0)
+
+[node name="StonePlatform3" parent="PlatformBlue10" instance=ExtResource("2_ba40b")]
+position = Vector2(142, 0)
+
 [node name="PlatformBlue6" type="Node2D" parent="."]
 position = Vector2(251, 186)
 script = ExtResource("1_h445l")
@@ -184,6 +232,50 @@ position = Vector2(0, 139)
 [node name="StonePlatform2" parent="Wall3" instance=ExtResource("2_ba40b")]
 
 [node name="StonePlatform3" parent="Wall3" instance=ExtResource("2_ba40b")]
+position = Vector2(0, 70)
+
+[node name="Wall4" type="Node2D" parent="."]
+position = Vector2(754, 549)
+
+[node name="StonePlatform" parent="Wall4" instance=ExtResource("2_ba40b")]
+position = Vector2(0, 139)
+
+[node name="StonePlatform2" parent="Wall4" instance=ExtResource("2_ba40b")]
+
+[node name="StonePlatform3" parent="Wall4" instance=ExtResource("2_ba40b")]
+position = Vector2(0, 70)
+
+[node name="Wall5" type="Node2D" parent="."]
+position = Vector2(754, 335)
+
+[node name="StonePlatform" parent="Wall5" instance=ExtResource("2_ba40b")]
+position = Vector2(0, 139)
+
+[node name="StonePlatform2" parent="Wall5" instance=ExtResource("2_ba40b")]
+
+[node name="StonePlatform3" parent="Wall5" instance=ExtResource("2_ba40b")]
+position = Vector2(0, 70)
+
+[node name="Wall6" type="Node2D" parent="."]
+position = Vector2(754, 128)
+
+[node name="StonePlatform" parent="Wall6" instance=ExtResource("2_ba40b")]
+position = Vector2(0, 139)
+
+[node name="StonePlatform2" parent="Wall6" instance=ExtResource("2_ba40b")]
+
+[node name="StonePlatform3" parent="Wall6" instance=ExtResource("2_ba40b")]
+position = Vector2(0, 70)
+
+[node name="Wall7" type="Node2D" parent="."]
+position = Vector2(754, -86)
+
+[node name="StonePlatform" parent="Wall7" instance=ExtResource("2_ba40b")]
+position = Vector2(0, 139)
+
+[node name="StonePlatform2" parent="Wall7" instance=ExtResource("2_ba40b")]
+
+[node name="StonePlatform3" parent="Wall7" instance=ExtResource("2_ba40b")]
 position = Vector2(0, 70)
 
 [connection signal="body_entered" from="ObjectiveArea" to="ObjectiveArea" method="_on_ObjectiveArea_body_entered"]

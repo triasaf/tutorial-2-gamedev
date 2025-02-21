@@ -42,12 +42,15 @@ func _on_ObjectiveArea_body_entered(body: RigidBody2D):
 	
 	if (body.name == "GreenShip"):
 		if area_id == "level1_2":
-			print("YOU WIN")
+			
 			# Load and add the win screen UI
 			if win_screen_scene:
 				var win_screen = win_screen_scene.instantiate()
 				get_tree().current_scene.add_child(win_screen)  # Add to the current scene
-				print("Win screen displayed")
+				print("YOU WIN")
+				get_tree().change_scene_to_file("res://scenes/MainLevel.tscn")
+				
+				
 			else:
 				print("Error: Win screen scene is not assigned!")
 	
