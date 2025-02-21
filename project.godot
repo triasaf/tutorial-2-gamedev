@@ -15,6 +15,11 @@ run/main_scene="res://scenes/MainLevel.tscn"
 config/features=PackedStringArray("4.3")
 config/icon="res://assets/icon.png"
 
+[display]
+
+window/size/viewport_width=700
+window/size/viewport_height=700
+
 [input]
 
 move_up={

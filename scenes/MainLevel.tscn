@@ -1,17 +1,44 @@
-[gd_scene load_steps=6 format=3 uid="uid://cdoksexcakmop"]
+[gd_scene load_steps=12 format=3 uid="uid://cdoksexcakmop"]
 
 [ext_resource type="PackedScene" uid="uid://y5a4e3ajuy2r" path="res://scenes/StonePlatform.tscn" id="1"]
+[ext_resource type="Texture2D" uid="uid://bewd81ntceud2" path="res://assets/space background.png" id="1_qcbgx"]
+[ext_resource type="Script" path="res://scenes/main_level.gd" id="1_xv4f6"]
 [ext_resource type="PackedScene" uid="uid://datfp8kxjrjg" path="res://scenes/BlueShip.tscn" id="2"]
 [ext_resource type="Script" path="res://scenes/PlatformBlue.gd" id="3"]
 [ext_resource type="Script" path="res://scenes/ObjectiveArea.gd" id="4"]
+[ext_resource type="Texture2D" uid="uid://broxtcokdt5ei" path="res://assets/objective space.png" id="6_vr3cp"]
+[ext_resource type="Texture2D" uid="uid://5vvxu2iveoqq" path="res://assets/objective space rotate.png" id="7_ywfcg"]
+[ext_resource type="Script" path="res://scenes/animated_sprite_2d.gd" id="8_5wu3q"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8si33"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_vr3cp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ywfcg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="1"]
-size = Vector2(138.75, 79)
+size = Vector2(86, 81.5)
 
-[node name="MainLevel" type="Node"]
+[node name="MainLevel" type="Node2D"]
+script = ExtResource("1_xv4f6")
+metadata/_edit_vertical_guides_ = [0.0]
+
+[node name="SpaceBackground" type="Sprite2D" parent="."]
+position = Vector2(353, 351)
+scale = Vector2(1.19377, 1.16479)
+texture = ExtResource("1_qcbgx")
 
 [node name="PlatformBlue" type="Node2D" parent="."]
-position = Vector2(35, 565)
+position = Vector2(320, 645)
 script = ExtResource("3")
 
 [node name="StonePlatform" parent="PlatformBlue" instance=ExtResource("1")]
@@ -20,14 +47,69 @@ script = ExtResource("3")
 position = Vector2(70, 0)
 
 [node name="BlueShip" parent="." instance=ExtResource("2")]
-position = Vector2(72.7009, 421.901)
+position = Vector2(355, 573)
+mass = 0.129
 lock_rotation = true
 
 [node name="ObjectiveArea" type="Area2D" parent="."]
+position = Vector2(285, 0)
 script = ExtResource("4")
+area_id = "mainlevel"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ObjectiveArea"]
+position = Vector2(70, 57)
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_8si33")
+frame = 1
+frame_progress = 0.843187
+script = ExtResource("8_5wu3q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectiveArea"]
-position = Vector2(70.625, 40)
+position = Vector2(70, 41.25)
 shape = SubResource("1")
+
+[node name="Wall" type="Node2D" parent="."]
+position = Vector2(213, 461)
+
+[node name="StonePlatform" parent="Wall" instance=ExtResource("1")]
+position = Vector2(0, 139)
+
+[node name="StonePlatform2" parent="Wall" instance=ExtResource("1")]
+
+[node name="StonePlatform3" parent="Wall" instance=ExtResource("1")]
+position = Vector2(0, 70)
+
+[node name="Wall2" type="Node2D" parent="."]
+position = Vector2(213, 197)
+
+[node name="StonePlatform" parent="Wall2" instance=ExtResource("1")]
+position = Vector2(0, 137)
+
+[node name="StonePlatform2" parent="Wall2" instance=ExtResource("1")]
+
+[node name="StonePlatform3" parent="Wall2" instance=ExtResource("1")]
+position = Vector2(0, 68)
+
+[node name="Wall3" type="Node2D" parent="."]
+position = Vector2(496, 461)
+
+[node name="StonePlatform" parent="Wall3" instance=ExtResource("1")]
+position = Vector2(0, 139)
+
+[node name="StonePlatform2" parent="Wall3" instance=ExtResource("1")]
+
+[node name="StonePlatform3" parent="Wall3" instance=ExtResource("1")]
+position = Vector2(0, 70)
+
+[node name="Wall4" type="Node2D" parent="."]
+position = Vector2(496, 197)
+
+[node name="StonePlatform" parent="Wall4" instance=ExtResource("1")]
+position = Vector2(0, 137)
+
+[node name="StonePlatform2" parent="Wall4" instance=ExtResource("1")]
+
+[node name="StonePlatform3" parent="Wall4" instance=ExtResource("1")]
+position = Vector2(0, 69)
 
 [connection signal="body_entered" from="ObjectiveArea" to="ObjectiveArea" method="_on_ObjectiveArea_body_entered"]

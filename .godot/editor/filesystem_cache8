@@ -1,17 +1,30 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1739017971
-default_env.tres::Environment::-1::1739017958::0::1::::<><>::
-::res://assets/::1739017845
-fasilkom.png::CompressedTexture2D::7716203008561212981::1739017845::1739017973::1::::<><>::
-icon.png::CompressedTexture2D::7346330604504066256::1739017845::1739017972::1::::<><>::
-meteorBrown_big1.png::CompressedTexture2D::5959276255885206097::1739017845::1739017972::1::::<><>::
-playerShip1_blue.png::CompressedTexture2D::7616533849599883667::1739017845::1739017973::1::::<><>::
-playerShip1_green.png::CompressedTexture2D::2001637748197818689::1739017845::1739017973::1::::<><>::
-snow.png::CompressedTexture2D::4888826356960029576::1739017845::1739017972::1::::<><>::
-stone.png::CompressedTexture2D::6534652574608454091::1739017845::1739017973::1::::<><>::
-::res://scenes/::1739017845
-BlueShip.tscn::PackedScene::-1::1739017958::0::1::::<><>::res://assets/playerShip1_blue.png
-MainLevel.tscn::PackedScene::-1::1739017958::0::1::::<><>::res://scenes/StonePlatform.tscn<>res://scenes/BlueShip.tscn<>res://scenes/PlatformBlue.gd<>res://scenes/ObjectiveArea.gd
-ObjectiveArea.gd::GDScript::-1::1739017958::0::1::::<>Area2D<>::
-PlatformBlue.gd::GDScript::-1::1739017958::0::1::::<>Node2D<>::
-StonePlatform.tscn::PackedScene::-1::1739017958::0::1::::<><>::
+::res://::1740135184
+default_env.tres::Environment::784183765299159521::1740135139::0::1::::<><>::
+::res://assets/::1740118539
+fasilkom.png::CompressedTexture2D::7716203008561212981::1739502373::1739502485::1::::<><>::
+icon.png::CompressedTexture2D::7346330604504066256::1739502373::1739502485::1::::<><>::
+jets-left.png::CompressedTexture2D::7959391019243365103::1740068124::1740068140::1::::<><>::
+jets-right.png::CompressedTexture2D::3713285928965562629::1740068124::1740068144::1::::<><>::
+jets.png::CompressedTexture2D::6917483105021851219::1740067958::1740067983::1::::<><>::
+meteorBrown_big1.png::CompressedTexture2D::5959276255885206097::1739502373::1739502485::1::::<><>::
+objective space rotate.png::CompressedTexture2D::2150334464652577688::1740118539::1740118539::1::::<><>::
+objective space.png::CompressedTexture2D::3609962862147417104::1740118346::1740118347::1::::<><>::
+playerShip1_blue.png::CompressedTexture2D::7616533849599883667::1739502373::1739502485::1::::<><>::
+playerShip1_green.png::CompressedTexture2D::2001637748197818689::1739502373::1739502485::1::::<><>::
+snow.png::CompressedTexture2D::4888826356960029576::1739502373::1739502485::1::::<><>::
+space background.png::CompressedTexture2D::2712834837567393969::1740117812::1740117820::1::::<><>::
+stone.png::CompressedTexture2D::6534652574608454091::1739502373::1739502485::1::::<><>::
+::res://scenes/::1740135139
+animated_sprite_2d.gd::GDScript::-1::1740131993::0::1::::<>AnimatedSprite2D<>::
+BlueShip.tscn::PackedScene::211729922060446004::1740133956::0::1::::<><>::uid://dgrrg14sgp4f4::::res://assets/playerShip1_blue.png<>res://scenes/blue_ship.gd<>uid://c5s463d2eac4r::::res://assets/jets.png<>uid://bs50jn5xg2bg4::::res://assets/jets-right.png<>uid://dlnuailg1pcnv::::res://assets/jets-left.png
+blue_ship.gd::GDScript::-1::1740130575::0::1::::<>RigidBody2D<>::
+GreenShip.tscn::PackedScene::3980684255228111420::1740133956::0::1::::<><>::res://scenes/blue_ship.gd<>uid://3ruxfsvp87ub::::res://assets/playerShip1_green.png<>uid://c5s463d2eac4r::::res://assets/jets.png<>uid://bs50jn5xg2bg4::::res://assets/jets-right.png<>uid://dlnuailg1pcnv::::res://assets/jets-left.png
+Level1.tscn::PackedScene::911968606544479486::1740133956::0::1::::<><>::res://scenes/PlatformBlue.gd<>res://scenes/level_1.gd<>uid://qn5irybu4mhh::::res://scenes/WinScreen.tscn<>uid://y5a4e3ajuy2r::::res://scenes/StonePlatform.tscn<>uid://bewd81ntceud2::::res://assets/space background.png<>uid://datfp8kxjrjg::::res://scenes/BlueShip.tscn<>res://scenes/ObjectiveArea.gd<>uid://bwyjj2bohc4jw::::res://scenes/GreenShip.tscn<>uid://broxtcokdt5ei::::res://assets/objective space.png<>uid://5vvxu2iveoqq::::res://assets/objective space rotate.png<>res://scenes/animated_sprite_2d.gd
+level_1.gd::GDScript::-1::1740133713::0::1::::<>Node<>::
+MainLevel.tscn::PackedScene::5012948746790269291::1740133956::0::1::::<><>::uid://y5a4e3ajuy2r::::res://scenes/StonePlatform.tscn<>uid://bewd81ntceud2::::res://assets/space background.png<>res://scenes/main_level.gd<>uid://datfp8kxjrjg::::res://scenes/BlueShip.tscn<>res://scenes/PlatformBlue.gd<>res://scenes/ObjectiveArea.gd<>uid://broxtcokdt5ei::::res://assets/objective space.png<>uid://5vvxu2iveoqq::::res://assets/objective space rotate.png<>res://scenes/animated_sprite_2d.gd
+main_level.gd::GDScript::-1::1740130702::0::1::::<>Node2D<>::
+ObjectiveArea.gd::GDScript::-1::1740133874::0::1::::<>Area2D<>::
+PlatformBlue.gd::GDScript::-1::1740061791::0::1::::<>Node2D<>::
+StonePlatform.tscn::PackedScene::1746515621318578487::1740133956::0::1::::<><>::uid://c0do1j2bc1edf::::res://assets/stone.png
+WinScreen.tscn::PackedScene::1151695135191102829::1740135139::0::1::::<><>::
